@@ -13,7 +13,6 @@
 
 #define AdaptW(floatValue) [CCFitdpiUtil adaptWidthWithValue:floatValue]
 
-
 @interface CCFitdpiUtil : NSObject
 
 /**
