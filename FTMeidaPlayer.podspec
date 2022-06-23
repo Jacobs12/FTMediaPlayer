@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "FTMeidaPlayer"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of FTMeidaPlayer."
+  spec.summary      = "FFmpeg自动安装库"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,9 +25,10 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+  FFmpeg自动安装库
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/FTMeidaPlayer"
+  spec.homepage     = "https://github.com/Jacobs12/FTMediaPlayer"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,7 +39,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
+  spec.license      = "MIT"
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -52,7 +53,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "fengtao92" => "fengtao@ewang.com" }
+  spec.author             = { "Jacobs12" => "1779253293@qq.com" }
   # Or just: spec.author    = "fengtao92"
   # spec.authors            = { "fengtao92" => "fengtao@ewang.com" }
   # spec.social_media_url   = "https://twitter.com/fengtao92"
@@ -79,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/FTMeidaPlayer.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/Jacobs12/FTMediaPlayer/FTMediaPlayer.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,10 +91,10 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "FTMeidaPlayer", "FTMeidaPlayer/include/**/*.{h,m}"
+  #spec.exclude_files = "Classes/Exclude"
 
-  # spec.public_header_files = "Classes/**/*.h"
+  spec.public_header_files = "FTMeidaPlayer/include/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -117,10 +118,10 @@ Pod::Spec.new do |spec|
   #
 
   # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
+  spec.frameworks = 'AudioToolbox', 'CoreMedia', 'VideoToolbox', 'AVFoundation'
 
   # spec.library   = "iconv"
-  # spec.libraries = "iconv", "xml2"
+   spec.libraries = 'bz2', 'iconv', 'z'
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
