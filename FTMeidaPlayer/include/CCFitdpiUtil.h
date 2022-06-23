@@ -12,7 +12,7 @@
 #define kRefereHeight 667.0 // 参考高度
 
 #define AdaptW(floatValue) [CCFitdpiUtil adaptWidthWithValue:floatValue]
-
+ 
 @interface CCFitdpiUtil : NSObject
 
 /**
