@@ -1,0 +1,14 @@
+prefix=libffmpeg_dir
+exec_prefix=${prefix}
+libdir=libffmpeg_dir/lib
+includedir=libffmpeg_dir/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 57.27.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm -framework VideoToolbox -framework CoreFoundation -framework CoreMedia -framework CoreVideo -framework CoreServices
+Cflags: -I${includedir}
